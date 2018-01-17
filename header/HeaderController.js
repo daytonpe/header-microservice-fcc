@@ -2,10 +2,6 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
 const moment = require("moment");
-const si = require("systeminformation");
-const useragent = require("express-useragent");
-
-// const helper = require('../helper.js');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 const Header = require("./Header");

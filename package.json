@@ -19,7 +19,6 @@
     "nodemon": "^1.14.7",
     "npm": "^5.6.0",
     "start": "^5.1.0",
-    "systeminformation": "^3.33.13",
     "user-agent": "^1.0.4"
   }
 }
