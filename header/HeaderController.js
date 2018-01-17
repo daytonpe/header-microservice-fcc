@@ -11,8 +11,6 @@ router.use(bodyParser.urlencoded({ extended: true }));
 const Header = require("./Header");
 
 router.get("/", function(req, res) {
-  // const systemInfo = req.useragent;
-  // console.log(req.headers["user-agent"]);
   let output = {};
   const ipaddress =
     req.headers["x-forwarded-for"] ||
@@ -35,20 +33,6 @@ router.get("/", function(req, res) {
     software[6].slice(0, -1);
   output.language = req.headers["accept-language"].split(",")[0];
   res.send(output);
-  // si.osInfo(function(data) {
-  //   // output.software = `${data.platform} ${data.distro}`;
-  //   // output.software = data;
-  //
-  //   si.cpu(function(data) {
-  //     output.hardware = `${data.manufacturer} ${data.brand}`;
-  //
-  //     si.networkConnections(function(data) {
-  //       // console.log("NETWORK INTERFACES");
-  //       // console.log(data);
-  //       res.send(output);
-  //     });
-  //   });
-  // });
 });
 
 module.exports = router;
