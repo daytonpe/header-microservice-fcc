@@ -14,11 +14,11 @@ router.get("/", function(req, res) {
   // const systemInfo = req.useragent;
   console.log(req.headers["x-forwarded-for"]);
   let output = {};
-  var ip = req.ip;
-  //   req.headers["x-forwarded-for"] ||
-  //   req.connection.remoteAddress ||
-  //   req.socket.remoteAddress ||
-  //   (req.connection.socket ? req.connection.socket.remoteAddress : null);
+  var ip =
+    req.headers["x-forwarded-for"] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    (req.connection.socket ? req.connection.socket.remoteAddress : null);
 
   output.ip = ip;
   output.language = req.headers["accept-language"].split(",")[0];
