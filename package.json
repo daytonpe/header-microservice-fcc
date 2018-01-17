@@ -13,11 +13,13 @@
     "and": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-useragent": "^1.0.8",
     "moment": "^2.20.1",
     "mongoose": "^4.13.8",
     "nodemon": "^1.14.7",
     "npm": "^5.6.0",
     "start": "^5.1.0",
-    "systeminformation": "^3.33.13"
+    "systeminformation": "^3.33.13",
+    "user-agent": "^1.0.4"
   }
 }

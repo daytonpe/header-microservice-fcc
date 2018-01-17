@@ -1,7 +1,9 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
+const useragent = require("express-useragent");
 
-var UserController = require("./header/HeaderController");
+const UserController = require("./header/HeaderController");
 app.use("/", UserController);
+app.use(useragent.express());
 
 module.exports = app;
